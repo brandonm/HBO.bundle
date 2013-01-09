@@ -1,0 +1,29 @@
+[
+    {
+        "id": "username",
+        "type": "text",
+        "label": "Username",
+        "default": ""
+    },
+    {
+        "id": "password",
+        "type": "text",
+        "label": "Password",
+        "default": "",
+        "option": "hidden",
+        "secure":   "true",
+    },
+    {
+        "id": "zipcode",
+        "type": "text",
+        "label": "ZIP Code (Needed for Charter)",
+        "default": "",
+    },
+    {
+        "id": "provider",
+        "type": "enum",
+        "label": "Provider",
+        "values": ["ATT", "Charter", "Comcast", "Cox", "DirecTV", "Dish", "Time Warner"],
+        "default": "ATT",
+    }
+]

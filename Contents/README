@@ -1,0 +1,28 @@
+HBO GO Channel for Plex
+
+This is the first build and is work in progress. I need needs help testing and fixing bugs.
+
+I have only been able to test AT&T provider.
+
+
+Known Problems or needs more work
+------------------------------------
+- Doesn't seem to login successfully every time or the check if already logged in only
+  sometimes works.  Find a better login check?
+
+- All providers need testing. I have only been able to test AT&T
+
+- Video window crop is differently on Windows and Mac.
+
+- Add HBO Landing Pages
+
+- HBO limits the amount of streams a user can have making testing hard because the limit
+  seems to come up fast. Whats the limit? not sure
+  - Then Plex will crash while starting and stopping video testing then we need to login
+    again which messes up the limit and you will need to wait til HBO expires the streams...
+
+- Add search
+
+- Add URL Service
+
+- Need to be able to use ${url} in javascript so we can combine to one site config file.

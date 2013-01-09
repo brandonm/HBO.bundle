@@ -1,0 +1,11 @@
+####################################################################################################
+def MetadataObjectForURL(url):
+  return VideoClipObject()
+
+####################################################################################################
+def MediaObjectsForURL(url):
+  return [
+    MediaObject(
+      parts = [PartObject(key=WebVideoURL(url))]
+    )
+  ]
