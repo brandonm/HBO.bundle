@@ -157,9 +157,9 @@
                 <javascript script="true ? 1 : 0" matches="1" />
             </condition>
             <action>
-                <pause time="2000" />
-                <run script="document.getElementById('Username').value='${username}'; document.getElementById('Password').value='${password}'; document.LoginForm.submit();" />
                 <pause time="3000" />
+                <run script="document.getElementById('Username').value='${username}'; document.getElementById('Password').value='${password}'; document.LoginForm.submit();" />
+                <pause time="4000" />
                 <goto state="load-movie" />
             </action>
         </event>

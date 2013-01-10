@@ -148,9 +148,9 @@
                 <javascript script="true ? 1 : 0" matches="1" />
             </condition>
             <action>
-                <pause time="2000" />
-                <run script="document.getElementById('usernameInputId').value='${username}'; document.password.value='${password}'; document.getElementById('rememberCheckboxId').checked=true; document.userInfo.submit();" />
                 <pause time="3000" />
+                <run script="document.getElementById('usernameInputId').value='${username}'; document.password.value='${password}'; document.getElementById('rememberCheckboxId').checked=true; document.userInfo.submit();" />
+                <pause time="4000" />
                 <goto state="load-movie" />
             </action>
         </event>

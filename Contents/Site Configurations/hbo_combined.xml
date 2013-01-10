@@ -212,9 +212,9 @@
                 <javascript script="true ? 1 : 0" matches="1" />
             </condition>
             <action>
-                <pause time="2000" />
-                <run script="document.getElementById('Username').value='${username}'; document.getElementById('Password').value='${password}'; document.LoginForm.submit();" />
                 <pause time="3000" />
+                <run script="document.getElementById('Username').value='${username}'; document.getElementById('Password').value='${password}'; document.LoginForm.submit();" />
+                <pause time="4000" />
                 <goto state="load-movie" />
             </action>
         </event>
@@ -241,9 +241,9 @@
                 <javascript script="true ? 1 : 0" matches="1" />
             </condition>
             <action>
-                <pause time="2000" />
-                <run script="document.getElementById('user').value='${username}'; document.getElementById('passwd').value='${password}'; document.getElementById('remember_me').checked=true; document.getElementById('right').form.submit();" />
                 <pause time="3000" />
+                <run script="document.getElementById('user').value='${username}'; document.getElementById('passwd').value='${password}'; document.getElementById('remember_me').checked=true; document.getElementById('right').form.submit();" />
+                <pause time="4000" />
                 <goto state="load-movie" />
             </action>
         </event>
@@ -270,9 +270,9 @@
                 <javascript script="true ? 1 : 0" matches="1" />
             </condition>
             <action>
-                <pause time="2000" />
-                <run script="document.getElementById('loginFormUsername').value='${username}'; document.getElementById('loginFormPassword').value='${password}'; document.getElementById('loginFormRemember').checked=true; document.IDPLogin.submit();" />
                 <pause time="3000" />
+                <run script="document.getElementById('loginFormUsername').value='${username}'; document.getElementById('loginFormPassword').value='${password}'; document.getElementById('loginFormRemember').checked=true; document.IDPLogin.submit();" />
+                <pause time="4000" />
                 <goto state="load-movie" />
             </action>
         </event>
@@ -299,9 +299,9 @@
                 <javascript script="true ? 1 : 0" matches="1" />
             </condition>
             <action>
-                <pause time="2000" />
-                <run script="document.getElementById('loginFormUsername').value='${username}'; document.getElementById('loginFormPassword').value='${password}'; document.getElementById('loginFormRemember').checked=true; document.LoginPage.submit();" />
                 <pause time="3000" />
+                <run script="document.getElementById('loginFormUsername').value='${username}'; document.getElementById('loginFormPassword').value='${password}'; document.getElementById('loginFormRemember').checked=true; document.LoginPage.submit();" />
+                <pause time="4000" />
                 <goto state="load-movie" />
             </action>
         </event>
@@ -328,9 +328,9 @@
                 <javascript script="true ? 1 : 0" matches="1" />
             </condition>
             <action>
-                <pause time="2000" />
-                <run script="document.getElementById('username').value='${username}'; document.getElementById('password').value='${password}'; document.getElementById('zipcode').value='${zipcode}' document.getElementById('remember_me').checked=true; document.f.submit();" />
                 <pause time="3000" />
+                <run script="document.getElementById('username').value='${username}'; document.getElementById('password').value='${password}'; document.getElementById('zipcode').value='${zipcode}' document.getElementById('remember_me').checked=true; document.f.submit();" />
+                <pause time="4000" />
                 <goto state="load-movie" />
             </action>
         </event>
@@ -357,9 +357,9 @@
                 <javascript script="true ? 1 : 0" matches="1" />
             </condition>
             <action>
-                <pause time="2000" />
-                <run script="document.getElementById('usernameInputId').value='${username}'; document.password.value='${password}'; document.getElementById('rememberCheckboxId').checked=true; document.userInfo.submit();" />
                 <pause time="3000" />
+                <run script="document.getElementById('usernameInputId').value='${username}'; document.password.value='${password}'; document.getElementById('rememberCheckboxId').checked=true; document.userInfo.submit();" />
+                <pause time="4000" />
                 <goto state="load-movie" />
             </action>
         </event>
@@ -386,9 +386,9 @@
                 <javascript script="true ? 1 : 0" matches="1" />
             </condition>
             <action>
-                <pause time="2000" />
-                <run script="document.getElementById('username').value='${username}'; document.getElementById('password').value='${password}'; document.getElementById('main').remember.checked=true; document.getElementById('main').form.submit();" />
                 <pause time="3000" />
+                <run script="document.getElementById('username').value='${username}'; document.getElementById('password').value='${password}'; document.getElementById('main').remember.checked=true; document.getElementById('main').form.submit();" />
+                <pause time="4000" />
                 <goto state="load-movie" />
             </action>
         </event>
