@@ -149,7 +149,7 @@
             </condition>
             <action>
                 <pause time="3000" />
-                <run script="document.getElementById('username').value='${username}'; document.getElementById('password').value='${password}'; document.getElementById('zipcode').value='${zipcode}' document.getElementById('remember_me').checked=true; document.f.submit();" />
+                <run script="document.getElementById('username').value='${username}';document.getElementById('password').value='${password}';document.getElementById('zipcode').value='${zipcode}';document.getElementById('remember_me').checked=true;document.f.submit();" />
                 <pause time="4000" />
                 <goto state="load-movie" />
             </action>

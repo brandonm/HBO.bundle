@@ -149,7 +149,8 @@
             </condition>
             <action>
                 <pause time="3000" />
-                <run script="document.getElementById('usernameInputId').value='${username}'; document.password.value='${password}'; document.getElementById('rememberCheckboxId').checked=true; document.userInfo.submit();" />
+                <!-- DirecTV named there submit button 'submit' to that overrides the submit function so we need a submit method from another form and hack 'this' with call -->
+                <run script="f=document.forms['userInfo'];f.onsubmit = null;f.elements['username'].value='${username}';f.elements['password'].value='${password}';document.getElementById('rememberCheckboxId').checked=true;document.createElement('form').submit.call(f);" />
                 <pause time="4000" />
                 <goto state="load-movie" />
             </action>
