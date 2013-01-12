@@ -12,7 +12,7 @@
             </array>
             <key>URLPatterns</key>
             <array>
-                <string>http://www\.hbogo\.com/#series/video&amp;assetID=.+\?videoMode=embeddedVideo\?showSpecialFeatures=false&amp;provider=att</string>
+                <string>http://www\.hbogo\.com/#series/video&amp;assetID=.+\?videoMode=embeddedVideo\?showSpecialFeatures=false&amp;provider=.+</string>
             </array>
         </dict>
     </dict>
