@@ -27,7 +27,7 @@ STREAM_URL = 'http://www.hbogo.com/#series/video&assetID=%s?videoMode=embeddedVi
 MENU_SKIP = [ 'Free', 'Home']
 
 # Providers that we have setup.
-PROVIDERS = {"ATT": "att", "Comcast": "comcast", "Time Warner": "timewarner", "Cox": "cox", "Charter": "charter", "DirecTV": "directv", "Dish": "dish"}
+PROVIDERS = {"Astound":"astound","AT&T U-verse":"att","Atlantic Broadband":"atlantic_broadband","BendBroadband":"bend","Blue Ridge Communications":"blue_ridge","Bright House Networks":"bright_house","Cable ONE":"cable_one","CenturyLink Prism":"centrylink","Charter":"charter","Comcast XFINITY":"comcast","Cox":"cox","DIRECTV":"directv","DIRECTV PUERTO RICO":"directv_pr","DISH":"dish","EPB Fiber Optics":"epb_fiber_optics","Grande Communications":"grande","Hawaiian Telcom":"hawaiian","HBC":"hbc","HTC Digital Cable":"htc","Insight Communications":"insight","Massillon Cable/Clear Picture":"massillon","Mediacom":"mediacom","MetroCast":"metrocast","Midcontinent Communications":"midcontinent","Optimum":"optimum","RCN":"rcn","Suddenlink":"suddenlink","Time Warner Cable":"timewarner","Verizon FiOS":"verizon","Wave Broadband":"wave","WOW!":"wow"}
 
 ####################################################################################################
 def Start():

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site
-    site="http://www\.hbogo\.com/#series/video&amp;assetID=.+\?videoMode=embeddedVideo\?showSpecialFeatures=false&amp;provider=comcast"
+    site="http://www\.hbogo\.com/#series/video&amp;assetID=.+\?videoMode=embeddedVideo\?showSpecialFeatures=false&amp;provider=mediacom"
     agent="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11"
     plugin="http://www.hbogo.com/hbogo.swf"
     identifier="com.plexapp.plugins.hbo"
@@ -120,7 +120,7 @@
             </condition>
             <action>
 				<!-- Call HBO login for the provider after the login it should then redirect to blank hbo page so its faster -->
-                <visit url="https://profile.hbogo.com/apps/profile/rest/samlService/authnRequest/COMCAST?serviceCode=HBO&amp;platformCode=DESKTOP&amp;deviceCode=DESKTOP&amp;RelayState=http%3A%2F%2Fprofile.hbogo.com%2F%23home%2F%26random%3D0.26881703199260076" />
+                <visit url="https://profile.hbogo.com/apps/profile/rest/samlService/authnRequest/MEDIACOM?serviceCode=HBO&amp;platformCode=DESKTOP&amp;deviceCode=DESKTOP&amp;RelayState=http%3A%2F%2Fprofile.hbogo.com%2F%23home%2F%26random%3D0.26881703199260076" />
                 <goto state="try-login" />
             </action>
         </event>
@@ -135,7 +135,7 @@
             </condition>
             <action>
                 <pause time="3000" />
-                <run script="document.getElementById('user').value='${username}';document.getElementById('passwd').value='${password}';document.getElementById('remember_me').checked=true;document.signin.submit();" />
+                <run script="f=document.forms['f'];f.elements['username'].value='${username}';f.elements['password'].value='${password}';f.elements['remember_me'].checked=true;f.submit();" />
                 <pause time="4000" />
                 <goto state="load-movie" />
             </action>

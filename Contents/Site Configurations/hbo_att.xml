@@ -112,23 +112,8 @@
 		</event>
     </state>
 
-    <!-- Find the provider to login with -->
-    <state name="load-login">
-        <event>
-            <condition>
-                <!-- is ATT? -->
-                <javascript script="true ? 1 : 0" matches="1" />
-            </condition>
-            <action>
-                <goto state="load-login-att" />
-            </action>
-        </event>
-    </state>
-
-
 	<!-- The different logins for each provider -->
-    <!-- AT&T U-verse -->
-    <state name="load-login-att">
+    <state name="load-login">
         <event>
             <condition>
                 <javascript script="true ? 1 : 0" matches="1" />
@@ -145,12 +130,13 @@
 
 				<!-- Call HBO login for the provider after the login it should then redirect to blank hbo page so its faster -->
                 <visit url="https://profile.hbogo.com/apps/profile/rest/samlService/authnRequest/ATT?serviceCode=HBO&amp;platformCode=DESKTOP&amp;deviceCode=DESKTOP&amp;RelayState=http%3A%2F%2Fprofile.hbogo.com%2F%23home%2F%26random%3D0.26881703199260076" />
-                <goto state="try-login-att" />
+                <goto state="try-login" />
             </action>
         </event>
     </state>
+    
     <!-- Try to login -->
-    <state name="try-login-att">
+    <state name="try-login">
         <event>
             <condition>
                 <!-- No condition required -->
