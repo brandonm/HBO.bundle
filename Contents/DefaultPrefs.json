@@ -11,7 +11,7 @@
         "label": "Password",
         "default": "",
         "option": "hidden",
-        "secure":   "true",
+        "secure": "true",
     },
     {
         "id": "zipcode",
@@ -24,6 +24,6 @@
         "type": "enum",
         "label": "Provider",
         "values": ["Astound","AT&T U-verse","Atlantic Broadband","BendBroadband","Blue Ridge Communications","Bright House Networks","Cable ONE","CenturyLink Prism","Charter","Comcast XFINITY","Cox","DIRECTV","DIRECTV PUERTO RICO","DISH","EPB Fiber Optics","Grande Communications","Hawaiian Telcom","HBC","HTC Digital Cable","Insight Communications","Massillon Cable/Clear Picture","Mediacom","MetroCast","Midcontinent Communications","Optimum","RCN","Suddenlink","Time Warner Cable","Verizon FiOS","Wave Broadband","WOW!"],
-        "default": "ATT",
+        "default": "Astound",
     }
 ]
