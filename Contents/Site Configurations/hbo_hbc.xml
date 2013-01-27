@@ -91,8 +91,7 @@
 				<command name="pause" />
 			</condition>
 			<action>
-				<move x="512" y="250" />
-				<click x="512" y="250" skipMouseUp="true" />
+				<type key="32" />
 				<goto state="paused" />
 			</action>
 		</event>
@@ -105,8 +104,7 @@
 				<command name="play" />
 			</condition>
 			<action>
-				<move x="512" y="250" />
-				<click x="512" y="250" skipMouseUp="true" />
+				<type key="32" />
 				<goto state="playing" />
 			</action>
 		</event>
