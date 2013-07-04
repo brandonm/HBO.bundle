@@ -2,7 +2,12 @@ HBO GO Channel for Plex
 
 This is the first build and is work in progress. I need needs help testing and fixing bugs.
 
-I have only been able to test AT&T provider.
+I have only been able to test AT&T and Comcast providers personally but other in the plex forum
+have tested with others.
+
+For help or more information find us on the HBOGO thread on the plexapp.com forum
+
+
 
 
 Known Problems or needs more work
@@ -10,7 +15,7 @@ Known Problems or needs more work
 - Doesn't seem to login successfully every time or the check if already logged in only
   sometimes works.  Find a better login check?
 
-- All providers need testing. I have only been able to test AT&T
+- All providers need testing. I have only been able to test AT&T and Comcast
 
 - Video window crop is different on Windows and Mac.
 

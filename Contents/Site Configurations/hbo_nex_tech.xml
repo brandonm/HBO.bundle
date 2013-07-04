@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site
+    site="http://www\.hbogo\.com/#series/video&amp;assetID=.+\?videoMode=embeddedVideo\?showSpecialFeatures=false&amp;provider=nex_tech"
+    agent="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11"
+    plugin="http://www.hbogo.com/hbogo.swf"
+    identifier="com.plexapp.plugins.hbo"
+    initialState="wait-for-frame-load"
+    manualLock="true"
+    windowWidth="1024"
+    windowHeight="768"
+    version="1.0">
+
+	<crop x="0" y="104" width="0" height="574" />
+
+    <!-- The condition we use several times from within states to check if we're logged in or not -->
+    <condition name="need-to-login">
+        <!-- Returns true if we need to login -->
+        <and>
+            <javascript script="document.cookie.indexOf('auth') == -1 ? 1 : 0" matches="1" />
+        </and>
+    </condition>
+
+	<!-- Needs more testing to see if we can use seekbar when they need mouse movement -->
+	<seekbar type="thumb">
+		<start x="134" y="530" />
+		<end   x="893" y="530" />
+		<played>
+			<color rgb="717275" op="brighter-than" />
+			<color rgb="616161" op="brighter-than" />
+		</played>
+	</seekbar>
+
+    <!-- Wait for frame to load -->
+    <state name="wait-for-frame-load">
+        <event>
+            <condition>
+                <!-- Wait for the DOM to load... -->
+                <frameLoaded />
+            </condition>
+            <action>
+                <!-- ...then goto the 'check-for-auth' state -->
+                <pause time="1000" />
+                <goto state="check-for-auth" />
+            </action>
+        </event>
+    </state>
+
+    <!-- Check for auth -->
+    <state name="check-for-auth">
+        <event>
+            <condition>
+                <condition name="need-to-login" />
+            </condition>
+            <action>
+			    <!-- Need to login -->
+                <goto state="load-login" />
+            </action>
+        </event>
+        <event>
+            <condition>
+                <not>
+                    <condition name="need-to-login" />
+                </not>
+            </condition>
+            <action>
+			    <!-- Dont need to login try to play the movie -->
+                <goto state="load-movie" />
+            </action>
+        </event>
+    </state>
+
+    <!-- Try to load the movie -->
+    <state name="load-movie">
+        <event>
+            <condition>
+                <!-- No condition required -->
+                <javascript script="true ? 1 : 0" matches="1" />
+            </condition>
+            <action>
+                <visit url="${url}" />
+                <lockPlugin />
+                <goto state="playing" />
+            </action>
+        </event>
+    </state>
+
+    <!-- Playing -->
+    <state name="playing">
+		<event>
+			<condition>
+				<command name="pause" />
+			</condition>
+			<action>
+				<type key="32" />
+				<goto state="paused" />
+			</action>
+		</event>
+    </state>
+
+    <!-- Paused -->
+    <state name="paused">
+		<event>
+			<condition>
+				<command name="play" />
+			</condition>
+			<action>
+				<type key="32" />
+				<goto state="playing" />
+			</action>
+		</event>
+    </state>
+
+	<!-- The different logins for each provider -->
+    <state name="load-login">
+        <event>
+            <condition>
+                <javascript script="true ? 1 : 0" matches="1" />
+            </condition>
+            <action>
+				<!-- Call HBO login for the provider after the login it should then redirect to blank hbo page so its faster -->
+                <visit url="https://profile.hbogo.com/apps/profile/rest/samlService/authnRequest/NEXTECH?serviceCode=HBO&amp;platformCode=DESKTOP&amp;deviceCode=DESKTOP&amp;RelayState=http%3A%2F%2Fprofile.hbogo.com%2F%23home%2F%26random%3D0.26881703199260076" />
+                <goto state="try-login" />
+            </action>
+        </event>
+    </state>
+    
+    <!-- Try to login -->
+    <state name="try-login">
+        <event>
+            <condition>
+                <!-- No condition required -->
+                <javascript script="true ? 1 : 0" matches="1" />
+            </condition>
+            <action>
+                <pause time="3000" />
+                <run script="f=document.forms[0];f.elements['username'].value='${username}';f.elements['password'].value='${password}';f.elements['remember'].checked=true;f.submit();" />
+                <pause time="4000" />
+                <goto state="load-movie" />
+            </action>
+        </event>
+    </state>
+</site>
