@@ -133,7 +133,7 @@
             </condition>
             <action>
                 <pause time="3000" />
-                <run script="f=document.forms[0];f.elements['username'].value='${username}';f.elements['password'].value='${password}';f.submit();" />
+                <run script="f=document.forms['form'];f.onsubmit = null;f.elements['username'].value='${username}';f.elements['password'].value='${password}';document.createElement('form').submit.call(f);" />
                 <pause time="4000" />
                 <goto state="load-movie" />
             </action>
